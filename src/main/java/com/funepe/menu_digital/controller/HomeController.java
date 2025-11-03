@@ -17,6 +17,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
+
         // Busca TODOS os produtos ordenados por categoria
         List<Cardapio> cardapioCompleto = CardapioRepository.findAllOrderByCategoriaAndNome();
 

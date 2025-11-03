@@ -43,45 +43,7 @@
             </section>
             <section id="produtos">
 
-                <!-- LISTA DO CARDÁPIO -->
-                <div class="cardapio" th:if="${not #lists.isEmpty(cardapio)}">
-                    <div th:each="produto : ${cardapio}" class="produto-card">
-                        <img th:src="@{${produto.imagem}}" th:alt="${produto.nome}" class="produto-imagem">
-
-                        <div class="produto-info">
-                            <h3 th:text="${produto.nome}">Nome do Produto</h3>
-                            <p class="categoria" th:text="${produto.categoria}">Categoria</p>
-                            <p class="descricao" th:text="${produto.descricao}">Descrição do produto</p>
-                            <p class="preco" th:text="'R$ ' + ${#numbers.formatDecimal(produto.preco, 1, 2, 'POINT')}">Preço</p>
-                        </div>
-                    </div>
-                </div>
-
-
-<!--                <div class="card m-auto ">-->
-<!--                    <img th:src="@{/images/pizzas.jpeg}" class="card-img-top mt-2" alt="Pizzas">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Pizzas</h5>-->
-<!--                        <p class="card-text">Onde a magia encontra a perfeição!</p>-->
-<!--                        <a href=""><p class="card-text"><small class="text-body-secondary">Veja no cardápio.</small></p></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card m-auto ">-->
-<!--                    <img th:src="@{/images/hamburguerProduct.jpeg}" class="card-img-top mt-2" alt="Hamburgueres">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Hambúrgueres</h5>-->
-<!--                        <p class="card-text">Sabor irresistível em cada mordida!</p>-->
-<!--                        <a href=""><p class="card-text"><small class="text-body-secondary">Veja no cardápio.</small></p></a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="card m-auto ">-->
-<!--                    <img th:src="@{/images/croissant.jpeg}" class="card-img-top mt-2" alt="croissant">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Croissant</h5>-->
-<!--                        <p class="card-text">Crocância e recheio generoso!</p>-->
-<!--                        <a href=""><p class="card-text"><small class="text-body-secondary">Veja no cardápio.</small></p></a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                    <p>Desenvolvendo o loop das categorias</p>
 <!--                <div class="card m-auto ">-->
 <!--                    <img th:src="@{/images/sobremesa.jpeg}" class="card-img-top mt-2" alt="sobremesas">-->
 <!--                    <div class="card-body">-->
@@ -90,6 +52,7 @@
 <!--                        <a href=""><p class="card-text"><small class="text-body-secondary">Veja no cardápio.</small></p></a>-->
 <!--                    </div>-->
 <!--                </div>-->
+
             </section>
         </div>
     </main>
