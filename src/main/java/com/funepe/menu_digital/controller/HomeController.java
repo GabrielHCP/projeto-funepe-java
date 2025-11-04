@@ -18,13 +18,13 @@ public class HomeController {
     @GetMapping("/")
     public String home(Model model) {
 
-        // Busca TODOS os produtos ordenados por categoria
-        List<Cardapio> cardapioCompleto = CardapioRepository.findAllOrderByCategoriaAndNome();
+        // Busca todas as categorias com o DISTINCT
+        List<String> categorias = CardapioRepository.findDistinctCategorias();
 
+        model.addAttribute("categorias", categorias);
         model.addAttribute("titulo", "Cardápio Digital");
-        model.addAttribute("cardapio", cardapioCompleto);
-
         return "home";
+
     }
 
 }

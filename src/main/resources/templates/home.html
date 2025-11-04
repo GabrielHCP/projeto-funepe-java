@@ -43,15 +43,28 @@
             </section>
             <section id="produtos">
 
-                    <p>Desenvolvendo o loop das categorias</p>
-<!--                <div class="card m-auto ">-->
-<!--                    <img th:src="@{/images/sobremesa.jpeg}" class="card-img-top mt-2" alt="sobremesas">-->
-<!--                    <div class="card-body">-->
-<!--                        <h5 class="card-title">Sobremesas</h5>-->
-<!--                        <p class="card-text">Quem não gosta de um docinho?</p>-->
-<!--                        <a href=""><p class="card-text"><small class="text-body-secondary">Veja no cardápio.</small></p></a>-->
-<!--                    </div>-->
-<!--                </div>-->
+                <div class="row" th:if="${not #lists.isEmpty(categorias)}">
+
+                    <div th:each="categoria : ${categorias}" class="col-md-4 mb-4">
+                        <div class="card m-auto">
+
+                            <!-- Imagem dinâmica por categoria -->
+                            <img th:src="@{'/images/' + ${categoria} + '.jpeg'}"
+                                 th:alt="${categoria}"
+                                 class="card-img-top mt-2"
+                                 style="height: 200px; object-fit: cover;">
+
+                            <div class="card-body text-center">
+                                <h5 class="card-title" th:text="${categoria}">Categoria</h5>
+
+
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
 
             </section>
         </div>

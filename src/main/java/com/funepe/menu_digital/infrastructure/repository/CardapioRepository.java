@@ -15,5 +15,11 @@ public interface CardapioRepository extends JpaRepository<Cardapio, Long> {
     // Método para buscar por categoria
     List<Cardapio> findByCategoriaOrderByNome(String categoria);
 
+    // Método para buscar as categorias
+    List<Cardapio> findByCategoria(String categoria);
+
+    @Query("SELECT DISTINCT c.categoria FROM Cardapio c ORDER BY c.categoria")
+    List<String> findDistinctCategorias();
+
 
 }

@@ -14,7 +14,7 @@ public class Cardapio {
     private String nome;
     private String descricao;
     private Double valor;
-    private String categoria;  // Ex: "Lanches", "Bebidas", "Sobremesas"
+    private String categoria;  // Ex: "1", "2", "3"
     private String imagem;     // Caminho da imagem
 
     // Construtores
